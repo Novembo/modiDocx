@@ -1,0 +1,4 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:44:50
+==================================================
+Remplacé: 'AUTRES DIPLOMES ET FORMATIONS PROFESSIONNELLES SUIVIES' par 'AUTRES DIPLOMES ET FORMATIONS PROFESSIONNELLES NON SUIVIES'

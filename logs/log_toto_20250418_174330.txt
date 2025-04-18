@@ -1,0 +1,4 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:43:30
+==================================================
+Remplacé: 'Novembre 2014' par 'Novembre 2017'

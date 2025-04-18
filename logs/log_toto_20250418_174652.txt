@@ -1,0 +1,4 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:46:52
+==================================================
+Remplacé: 'Résumé sur le candidat' par 'Résumé'

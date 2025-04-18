@@ -1,0 +1,5 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:54:26
+==================================================
+Remplacé: 'Audit des projets et programmes' par 'Audit des Projets et Programmes'
+Remplacé: 'SOGLOHOUN' par 'SOGLO'

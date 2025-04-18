@@ -129,6 +129,8 @@ class AuthFrame(Frame):
             messagebox.showinfo("Succès", "Inscription réussie !")
 
     def open_main_interface(self):
+        users = self.load_users()
+        username = self.login_user.get().strip()
         for w in self.master.winfo_children():
             w.destroy()
-        MainApp(self.master).pack(fill="both", expand=True)
+        MainApp(self.master, self.login_user.get().strip()).pack(fill="both", expand=True)

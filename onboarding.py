@@ -10,9 +10,9 @@ class OnboardingFrame(Frame):
         self.on_finish_callback = on_finish_callback
         self.index = 0
         self.slides = [
-            {"image": "assets/slide2.png", "text": "Bienvenue dans Text Replacer ! Modifiez facilement vos documents Word."},
-            {"image": "assets/slide1.png", "text": "Ajoutez vos mots ou expressions à remplacer, avec une colonne spécifique si besoin."},
-            {"image": "assets/slide0.png", "text": "Cliquez pour lancer la modification, un fichier modifié et un log seront générés."}
+            {"image": "assets/slide2.png", "text": "modiDocx - Votre assistant de traitement de documents\n\nModifiez des documents Word en masse grâce à une interface intuitive"},
+            {"image": "assets/slide1.png", "text": "Ajoutez autant de règles de remplacement que nécessaire\n\nCiblez des colonnes spécifiques dans les tableaux"},
+            {"image": "assets/slide0.png", "text": "Générez un nouveau fichier propre en un clic\n\nHistorique des modifications automatique"}
         ]
 
         self.image_label = Label(self)

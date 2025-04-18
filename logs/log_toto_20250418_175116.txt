@@ -1,0 +1,5 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:51:16
+==================================================
+Remplacé: 'Avril 2021' par 'Avril 2000'
+Remplacé: 'PRINCIPALES MISSIONS EFFECTUEES' par 'PRINCIPALES MISSIONS'

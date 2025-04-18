@@ -7,7 +7,7 @@ from onboarding import OnboardingFrame
 class App(tb.Window):
     def __init__(self):
         super().__init__(themename="litera")
-        self.title("modiDocx - Login")
+        self.title("modiDocx - Start")
         self.geometry("900x800")
         self.resizable(True, True)
 

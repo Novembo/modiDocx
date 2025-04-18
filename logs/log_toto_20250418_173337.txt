@@ -1,0 +1,9 @@
+Log de modification pour le fichier : /home/user/Documents/DONE/toto.docx
+Date : 2025-04-18 17:33:37
+==================================================
+Remplacé: 'M. Vincent SOGLOHOUN' par 'M. Vincent SOGLO'
+Remplacé: '+229 95 47 15 64' par '+229 01 95 47 15 64'
+Remplacé: 'Résumé sur le candidat' par 'Résumé sur le postulant'
+Remplacé: '2018' par '2014' (dans la colonne: Année d’obtention)
+Remplacé: '2018' par '2014' (dans la colonne: Cycles)
+Remplacé: 'a). Audit des projets et programmes :' par 'a). Audit des Projets et Programmes :'
