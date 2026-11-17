@@ -3,3 +3,10 @@
 *.pyd
 __pycache__
 *.so
+.venv/
+venv/
+dist/
+build/
+logs/
+users.json
+*.spec.bak

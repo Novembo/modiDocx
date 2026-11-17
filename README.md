@@ -1,17 +1,18 @@
 # modiDocx
 
-[![CI](https://github.com/Novembo/modiDocx/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/Novembo/modiDocx/actions/workflows/ci.yml)
-
-Application de bureau Windows qui remplace du texte dans les paragraphes et les tableaux de documents Word `.docx`.
+Application Windows locale pour prévisualiser et appliquer des remplacements à un lot de documents Word `.docx`.
 
 ## Fonctionnalités
 
-- Sélection d’un document `.docx` depuis l’interface graphique.
-- Ajout de plusieurs règles « texte recherché → texte de remplacement ».
-- Remplacement dans les paragraphes et les cellules de tableaux; une règle peut cibler les lignes d’une colonne par son en-tête.
-- Création d’un fichier `_modified.docx` et d’un journal texte dans `logs/`.
+- Sélection de plusieurs fichiers DOCX.
+- Règles de remplacement réutilisables, avec ciblage facultatif d’une colonne de tableau par son en-tête.
+- Prévisualisation du nombre de remplacements par document et par règle avant confirmation.
+- Traitement du corps, des tableaux, des en-têtes et des pieds de page, y compris les textes répartis entre plusieurs segments Word.
+- Création des résultats à côté des documents sources. Les fichiers existants ne sont pas écrasés; un suffixe numérique est ajouté en cas de conflit.
+- Import et export des règles en JSON versionné pour les partager entre collègues.
+- Bilan affiché à la fin du traitement. Si la préparation d’un fichier échoue, aucun résultat du lot n’est publié.
 
-L’application traite les textes présents dans les segments (runs) Word; une phrase répartie sur plusieurs segments peut ne pas être remplacée. Travaillez sur une copie de vos fichiers importants.
+Le traitement est local et les documents ne sont envoyés à aucun service externe. La prévisualisation donne une estimation des occurrences; vérifiez toujours les documents générés avant de les partager. Les zones de texte, commentaires et notes Word ne sont pas prises en charge dans cette version.
 
 ## Prérequis
 
@@ -29,23 +30,18 @@ python -m pip install -r requirements.txt
 python main.py
 ```
 
-L’application utilise Tkinter/ttkbootstrap pour l’interface et `python-docx` pour lire et écrire les documents. Au premier lancement, l’assistant présente les étapes principales avant l’écran de connexion et de traitement.
-
 ## Construire l’application Windows
 
 ```powershell
 python -m PyInstaller modiDocx.spec --noconfirm
 ```
 
-Le dossier de sortie est `dist/modiDocx/` et l’exécutable est `dist/modiDocx/modiDocx.exe`. Le script `build.bat` lance la même commande.
+Le dossier de sortie est `dist/modiDocx/` et l’exécutable est `dist/modiDocx/modiDocx.exe`.
 
 ## Vérification
 
-Le workflow GitHub Actions s’exécute sous Windows sur chaque push et pull request vers `main`. Il compile les sources Python et vérifie que le packaging PyInstaller aboutit; le dépôt ne contient pas actuellement de suite de tests unitaires.
+La CI Windows compile les sources, exécute les tests unitaires et vérifie que le paquet PyInstaller se construit.
 
-## Limites et données locales
+## Format des jeux de règles
 
-- Le projet n’a pas de déploiement web ni de version publiée configurée.
-- Les comptes sont stockés localement dans `users.json`; l’authentification est une fonction de démonstration, pas une protection adaptée à des comptes ou documents sensibles.
-- Les journaux `logs/` contiennent les chemins de fichiers et les valeurs recherchées/remplacées; protégez-les comme les documents traités.
-- Les remplacements doivent être vérifiés avant de partager le document produit. Le fichier source n’est pas remplacé volontairement.
+Les fichiers JSON exportés utilisent la version `1` et contiennent un nom ainsi qu’une liste de règles. Chaque règle définit `find`, `replace` et `column` (`null` lorsqu’aucune colonne particulière n’est visée). Importez le fichier dans modiDocx pour le partager avec un collègue.

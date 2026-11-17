@@ -1,15 +1,10 @@
-from PyInstaller.utils.hooks import collect_data_files
-
 block_cipher = None
 
 a = Analysis(
     ['main.py'],
     pathex=['.'],
     binaries=[],
-    datas=[
-        ('assets', 'assets'),
-        ('users.json', '.'),
-    ],
+    datas=[],
     hiddenimports=[],
     hookspath=[],
     runtime_hooks=[],
