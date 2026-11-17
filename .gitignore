@@ -10,3 +10,4 @@ build/
 logs/
 users.json
 *.spec.bak
+*.zip
